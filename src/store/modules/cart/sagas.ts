@@ -1,8 +1,8 @@
 import { all, takeLatest, select } from 'redux-saga/effects';
-import { addProductToCart } from './actions';
+import { addProductToCartRequest } from './actions';
 import { IState } from '../..';
 
-type CheckProductStockRequest = ReturnType<typeof addProductToCart>;
+type CheckProductStockRequest = ReturnType<typeof addProductToCartRequest>;
 
 function* checkProductStock({ payload }: CheckProductStockRequest) {
     const { product } = payload;
@@ -17,7 +17,7 @@ function* checkProductStock({ payload }: CheckProductStockRequest) {
 }
 
 export default all([
-    takeLatest('ADD_PRODUCT_TO_CART', checkProductStock)
+    takeLatest('ADD_PRODUCT_TO_CART_REQUEST', checkProductStock)
 ]);
 
 //takeLatest: If the previous action doesn't finished yet and the user is still creating new request
