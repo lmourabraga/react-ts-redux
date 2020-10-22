@@ -11,10 +11,10 @@ const Cart: React.FC = () => {
         <table>
             <thead>
                 <tr>
-                    <th>Produto</th>
-                    <th>Preço</th>
-                    <th>Quantidade</th>
-                    <th>Subtotal</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
                 </tr>
             </thead>
             <tbody>
